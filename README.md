@@ -1,46 +1,39 @@
-# Spike Token (SPK) Solidity Smart Contract
+# SPIKE TOKEN CONTRACT
 
-This Solidity smart contract enables the creation of the "Spike" token (SPK) on the Ethereum blockchain. The contract facilitates minting and burning of tokens and keeps track of token balances for various addresses.
+This is a basic Ethereum smart contract in Solidity for generating and managing a unique token. The basic operations of a token, such as minting and burning of tokens, are implemented by the contract. The name, abbreviation, and total supply are all given when the token is created.
 
-## Contract Details
+## Description
 
-- Token Name: Spike
-- Token Abbreviation: SPK
-- Total Supply: 300
-
-## Author
-
-- Author: Jewel Anne Panela
-- Course: BSCSSE (Bachelor of Science in Computer Science and Software Engineering)
+An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
-To use this contract, follow these steps:
+### Executing program
 
-### Deployment
+* Open the file, or copy - paste the code in https://remix.ethereum.org/
+* Select the play button on upper-left of the screen which will compile the file
+* Deploy the token
 
-1. Deploy this contract to an Ethereum-compatible blockchain network of your choice.
-2. You can use tools like Remix, Truffle, or Hardhat for deployment.
+## Features
 
-### Initialization
+### 1. Public Variables
+TOKEN_NAME: A constant string representing the name of the token.
+TOKEN_ABBRV: A constant string representing the abbreviation of the token.
+TOTAL_SUPPLY: An unsigned integer representing the initial total supply of the token.
+### 2. Mapping of Balances
+The contract includes a mapping that associates addresses with their corresponding token balances.
 
-- After deployment, the contract will automatically set the token name to "Spike," the abbreviation to "SPK," and the total supply to 300 tokens.
-- The total supply will be assigned to the creator's address.
+### 3. Mint Function
+The mint function allows users to mint (create) new tokens. It takes two parameters: an address and a value. When called, it increases the total supply by the specified value and also increases the balance of the sender's address by the same amount.
 
-## Minting Tokens
+### 4. Burn Function
+The burn function enables users to burn (destroy) existing tokens. Similar to the mint function, it also takes an address and a value as parameters. However, it deducts the specified value from the total supply and the balance of the sender's address.
 
-- Use the `mint` function to create new tokens.
-- Provide the recipient's address and the amount of tokens you want to mint.
-- Example: `mint(address _to, uint256 _value)`
 
-## Burning Tokens
 
-- Use the `burn` function to destroy tokens.
-- Specify the amount of tokens you want to burn from your own address.
-- Example: `burn(uint256 _value)`
 
-## Author Information
+## License
 
-- Author: Jewel Anne Panela
-- Course: BSCSSE (Bachelor of Science in Computer Science and Software Engineering)
+This contract is provided under the MIT License, allowing for open-source usage and modification.
 
+For detailed instructions on deploying and interacting with this contract, please refer to the accompanying documentation.
