@@ -1,28 +1,42 @@
 // SPDX-License-Identifier: MIT
-// Jewel Anne Panela - BSCSSE
-
 pragma solidity 0.8.18;
 
+/*
+       REQUIREMENTS
+    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
+    2. Your contract will have a mapping of addresses to balances (address => uint)
+    3. You will have a mint function that takes two parameters: an address and a value. 
+       The function then increases the total supply by that number and increases the balance 
+       of the “sender” address by that amount
+    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
+       It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
+       and from the balance of the “sender”.
+    5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
+       to the amount that is supposed to be burned.
+*/
+
 contract MyToken {
-    string public tokenName = "Spike";
-    string public tokenAbbrv = "SPK";
-    uint256 public totalSupply = 300;
 
-    mapping(address => uint256) public balances;
+    // public variables here
+    string public constant TOKEN_NAME = "SPIKE"; 
+    string public constant TOKEN_ABBRV = "SPK";
+    uint256 public TOTAL_SUPPLY = 100;
 
-    constructor() {
-        balances[msg.sender] = totalSupply;
+    // mapping variable here
+    mapping(address => uint) public BALANCES;
+
+    // mint function
+    function mint (address _address, uint _value) public{
+        TOTAL_SUPPLY += _value;
+        BALANCES[_address] += _value;
     }
 
-    function mint(address _to, uint256 _value) public {
-        require(_to != address(0), "Invalid address");
-        totalSupply += _value;
-        balances[_to] += _value;
-    }
-
-    function burn(uint256 _value) public {
-        require(balances[msg.sender] >= _value, "Insufficient balance");
-        totalSupply -= _value;
-        balances[msg.sender] -= _value;
+    // burn function
+    function burn (address _address, uint _value) public{
+        if (BALANCES[_address] >= _value){
+        TOTAL_SUPPLY -= _value;
+        BALANCES[_address] -= _value;
+        }
     }
 }
+
