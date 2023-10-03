@@ -1,18 +1,10 @@
-# SPIKE TOKEN CONTRACT
+# MYTOKEN CONTRACT
 
 This is a basic Ethereum smart contract in Solidity for generating and managing a unique token. The basic operations of a token, such as minting and burning of tokens, are implemented by the contract. The name, abbreviation, and total supply are all given when the token is created.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
-
-## Getting Started
-
-### Executing program
-
-* Open the file, or copy - paste the code in https://remix.ethereum.org/
-* Select the play button on upper-left of the screen which will compile the file
-* Deploy the token
+this Solidity smart contract, named "MyToken," is designed to implement a basic cryptocurrency token with the following features:
 
 ## Features
 
@@ -29,7 +21,13 @@ The mint function allows users to mint (create) new tokens. It takes two paramet
 ### 4. Burn Function
 The burn function enables users to burn (destroy) existing tokens. Similar to the mint function, it also takes an address and a value as parameters. However, it deducts the specified value from the total supply and the balance of the sender's address.
 
+## Getting Started
 
+### Executing program
+
+* Open the file, or copy - paste the code in https://remix.ethereum.org/
+* Select the play button on upper-left of the screen which will compile the file
+* Deploy the token
 
 
 ## License
