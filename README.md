@@ -17,8 +17,8 @@ An in-depth paragraph about your project and overview of use.
 ## Features
 
 ### 1. Public Variables
-TOKEN_NAME: A constant string representing the name of the token.
-TOKEN_ABBRV: A constant string representing the abbreviation of the token.
+TOKEN_NAME: A constant string representing the name of the token. In this case, the token is named "SPIKE".
+TOKEN_ABBRV: A constant string representing the abbreviation of the token. This token's abbreviation is "SPK".
 TOTAL_SUPPLY: An unsigned integer representing the initial total supply of the token.
 ### 2. Mapping of Balances
 The contract includes a mapping that associates addresses with their corresponding token balances.
