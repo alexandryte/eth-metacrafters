@@ -35,5 +35,3 @@ The burn function enables users to burn (destroy) existing tokens. Similar to th
 ## License
 
 This contract is provided under the MIT License, allowing for open-source usage and modification.
-
-For detailed instructions on deploying and interacting with this contract, please refer to the accompanying documentation.
